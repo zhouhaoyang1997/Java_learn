@@ -1,4 +1,4 @@
-package ѧϰ;
+ package ѧϰ;
 import java.math.BigInteger;  
 import java.util.*;  
   

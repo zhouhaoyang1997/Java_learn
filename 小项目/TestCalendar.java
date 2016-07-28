@@ -18,7 +18,7 @@ public class TestCalendar {
 			 time = date.parse(str);//∑µªÿdate¿‡ 
 		} catch (ParseException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();s
+			e.printStackTrace();
 		}
 		Calendar calendar = new GregorianCalendar();
 		calendar.setTime(time); 
