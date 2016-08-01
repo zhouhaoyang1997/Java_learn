@@ -40,7 +40,7 @@ public class Filelist {
     	FileWriter B = new FileWriter("C:\\Users\\38410\\Desktop\\111.txt");
     	int b = 0;
     	while((b=A.read())!=-1){
-    		B.
+    		
     	}
     	A.close();
     	B.close();

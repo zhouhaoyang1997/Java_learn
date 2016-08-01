@@ -2,6 +2,8 @@ package ѧϰ;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 import java.util.ArrayList;
 import java.util.Iterator;
 public class TestMouseAdapter {
@@ -10,18 +12,26 @@ public class TestMouseAdapter {
 }
 }
 class PointFrame extends Frame{
-	ArrayList points = null;
+	ArrayList<Point> points = null;
 	public PointFrame(String title) throws HeadlessException {
 		super(title);
-		points = new ArrayList();
+		points = new ArrayList<Point>();
 		setLayout(null);
 		setBounds(500, 300, 500, 400);
 		this.addMouseListener(new MyMonitor());
+		this.addWindowListener(new WindowAdapter() {
+			@Override
+			public void windowClosing(WindowEvent e) {
+				// TODO Auto-generated method stub
+				setVisible(false);
+				System.exit(0);
+			}
+		});
 		setVisible(true);
 		// TODO Auto-generated constructor stub
 	}
 	public void paint(Graphics g){
-		Iterator i = points.iterator();
+		Iterator<Point> i = points.iterator();
 		while(i.hasNext()){
 			Point p = (Point)i.next();
 			g.setColor(Color.red);
@@ -33,7 +43,7 @@ class PointFrame extends Frame{
 	}
 	
 }
-class MyMonitor extends MouseAdapter{
+class MyMonitor extends MouseAdapter {
 	@Override
 	public void mousePressed(MouseEvent e) {
 		// TODO Auto-generated method stub
@@ -42,3 +52,5 @@ class MyMonitor extends MouseAdapter{
 		A.repaint();
 	}
 }
+
+
