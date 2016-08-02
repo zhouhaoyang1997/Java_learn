@@ -26,7 +26,7 @@ class List{
 				level++;
 			}
 		}
-		fw.flush();
+		//fw.flush();
 		fw.close();
 		
 		}
