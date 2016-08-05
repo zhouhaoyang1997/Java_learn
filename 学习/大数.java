@@ -9,7 +9,7 @@ public class ´óÊý
         Scanner in = new Scanner(System.in); 
         BigInteger aa[] = new BigInteger[100];   
         int n = in.nextInt();         
-        for(int i = 1; i <= n; ++i)  
+        for(int i = 1; i<= n; ++i)  
         {  
             BigInteger a = in.nextBigInteger();  
             BigInteger b = in.nextBigInteger();  
