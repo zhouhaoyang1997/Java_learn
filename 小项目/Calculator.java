@@ -11,9 +11,6 @@ import java.awt.Label;
 import java.awt.TextField;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.WindowAdapter;
-import java.awt.event.WindowEvent;
-import java.awt.event.WindowListener;
 import java.math.*;
 public class Calculator {
 	public static void main(String[] args) {
@@ -41,14 +38,6 @@ class MyFrame extends Frame{
 		setLayout(new FlowLayout());
 		sum.addActionListener(new MyMonitor(this));//xx.addActionListener() 里面传递的是监听器类->Object 这个只是相当于含参类
 		add(num1);add(plus); add(num2);add(sum);add(num3);//按顺序加载这几个
-		this.addWindowListener(new WindowAdapter() {
-			@Override
-			public void windowClosing(WindowEvent e) {
-				// TODO Auto-generated method stub
-				System.exit(0);
-				super.windowClosing(e);
-			}
-		});
 		pack();
 		setVisible(true);
 	}
